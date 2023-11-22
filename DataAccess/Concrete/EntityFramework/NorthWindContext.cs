@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DataAccess.Concrete.EntityFramework
 {
     // Context : Db tabloları ile proje classlarını bağlar.
-    public class NorthWindContext :DbContext
+    public class NorthWindContext : DbContext
     {
         // Bu metot bizim projemizin hangi veritabanı ile ilişkiliği belirtceğimiz yerdir.
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -19,7 +19,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet <Customer> Customers { get; set; }
-
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
